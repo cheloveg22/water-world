@@ -1,0 +1,72 @@
+.wrapper .image-block {
+  position: relative;
+  background-color: #80cdc6;
+  max-width: 560px;
+  min-height: 447px;
+  margin: 0 auto;
+  overflow: hidden; }
+.wrapper .mountains,
+.wrapper .boat,
+.wrapper .water,
+.wrapper .clouds {
+  position: absolute; }
+.wrapper .mountains {
+  bottom: 0; }
+.wrapper .boat {
+  bottom: 38px;
+  left: 28px;
+  width: 100px;
+  max-width: 18%;
+  transform-origin: center center;
+  animation-name: boat;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+.wrapper .water {
+  bottom: 0; }
+  .wrapper .water .flowers {
+    animation-name: flowers;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
+.wrapper .clouds {
+  top: -10px;
+  max-width: 360px;
+  right: 0; }
+  .wrapper .clouds .center-cloud {
+    animation-name: clouds;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; }
+  .wrapper .clouds .two-clouds {
+    animation-name: clouds;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
+
+@keyframes boat {
+  0% {
+    transform: rotate(-2deg); }
+  100% {
+    transform: rotate(2deg); } }
+@keyframes clouds {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(30px); } }
+@keyframes flowers {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(10px); } }
+@media screen and (max-width: 500px) {
+  .wrapper .image-block {
+    min-height: 250px; }
+    .wrapper .image-block .boat {
+      bottom: 20px; } }
+
+/*# sourceMappingURL=style.css.map */
